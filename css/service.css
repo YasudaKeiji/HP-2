@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.service-wrapper__body__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-wrapper__body__list__item {
+  position: relative;
+  width: 47.5%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px #ddd;
+  margin: 10% 0;
+}
+
+.service-wrapper__body__list__item.__service1 {
+}
+
+.service-wrapper__body__list__item.__service2 {
+  bottom: 15rem;
+}
+
+.service-wrapper__body__list__item.__service3 {
+  bottom: 7.5rem;
+  margin-bottom: 0;
+}
+
+.service-wrapper__body__list__item.__service4 {
+  bottom: 22.5rem;
+  margin-bottom: 0;
+}
+
+.service-wrapper__body__list__item__img {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  z-index: -1;
+}
+
+.service-wrapper__body__list__item__img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  transform: rotate(13deg);
+  right: -92.5%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(13deg);
+}
+
+.service-wrapper__body__list__item__img.__service {
+  background: url(../img/service.png) no-repeat center;
+  background-size: cover;
+}
+
+.service-wrapper__body__list__item__txt {
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-10%, -50%);
+}
+
+.service-wrapper__body__list__item__txt__sub {
+  font-size: 1.2rem;
+}
+
+.service-wrapper__body__list__item__txt__ttl {
+  display: inline;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(transparent 80%, #75a9ff);
+}
