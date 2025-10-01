@@ -191,10 +191,6 @@
   font-weight: 700;
 }
 
-.recruit .ttl {
-  margin-bottom: 10%;
-}
-
 .recruit-wrapper {
   display: flex;
   justify-content: space-between;
@@ -259,10 +255,6 @@
   padding-left: 0;
 }
 
-.news .ttl {
-  margin-bottom: 5%;
-}
-
 .news-wrapper__body {
   width: 100%;
 }
@@ -307,4 +299,8 @@
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2.5%;
+}
+
+.news-wrapper__body__list__item .btn {
+  margin-bottom: 5%;
 }

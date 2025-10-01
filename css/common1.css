@@ -89,7 +89,7 @@ header .drawer {
 
 .ttl {
   display: inline-block;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   font-size: 3rem;
   border-bottom: solid 3px #333;
   line-height: 1.3;
@@ -130,7 +130,7 @@ footer {
 .footer-wrapper__list__item {
   padding-right: 2.5%;
   margin-right: 2.5%;
-  border-right: solid 3px #75a9ff;
+  border-right: solid 3px #fff;
   font-size: 1.2rem;
   line-height: 1;
 }
