@@ -10,7 +10,7 @@
 }
 
 .service-wrapper__body:nth-of-type(3) {
-  margin-top: 5%;
+  flex-direction: row-reverse;
 }
 
 .service-wrapper__body__left__con {
