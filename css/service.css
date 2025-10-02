@@ -6,7 +6,9 @@
 
 .service-wrapper__body {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  margin-bottom: 3%;
 }
 
 .service-wrapper__body:nth-of-type(3) {
@@ -14,16 +16,16 @@
 }
 
 .service-wrapper__body__left__con {
-  width: 48%;
+  width: 45%;
 }
 
-.service-wrapper__body__left__con_ttl {
+.service-wrapper__body__left__con__ttl {
   padding-left: 0;
   text-align: center;
   line-height: 1.5;
 }
 
-.service-wrapper__body__left__con_ttl h2 {
+.service-wrapper__body__left__con__ttl h2 {
   font-size: clamp(0.938rem, 0.551rem + 1.93vw, 2rem);
   font-weight: bold;
   color: #fff;
@@ -32,17 +34,15 @@
   padding: 0 3%;
 }
 
-.service-wrapper__body__left__con_ttl p {
+.service-wrapper__body__left__con__ttl p {
   font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
   text-align: left;
   margin-top: 5%;
 }
 
 .service-wrapper__body__right__con {
-  width: 48%;
-  padding-left: 2%;
+  width: 53%;
 }
-
 
 .service-wrapper__body__right__con__img img {
   width: 100%;

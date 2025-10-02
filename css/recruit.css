@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.top {
+  background-image: url("../img/r-fv__bg.png");
+}
+
+.recruit-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recruit-wrapper__intro {
+  width: 25%;
+  position: sticky;
+  top: 0;
+}
+
+.recruit-wrapper__intro .ttl {
+  position: sticky;
+  top: 0;
+}
+
+.recruit-wrapper__intro .btn {
+  margin: 0 auto;
+  margin-top: 10%;
+  padding-left: 0;
+}
+
+.recruit-wrapper__body {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-wrapper__body__con {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.recruit-wrapper__body__con__number {
+  width: 10%;
+}
+
+.recruit-wrapper__body__con__number p {
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
+
+.recruit-wrapper__body__con__img {
+  width: 30%;
+}
+
+.recruit-wrapper__body__con__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.recruit-wrapper__body__con__txt {
+  width: 50%;
+}
+
+.recruit-wrapper__body__con__txt p {
+  padding-top: 5%;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
+
+.recruit-wrapper__body__con__txt span {
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+  font-weight: bold;
+}
+
+.recruit-wrapper__body__con__txt .btn {
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.people-wrapper__body {
+  width: 100%;
+}
+
+.people-wrapper__body__con {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-wrapper__body__con__left {
+  position: relative;
+  display: inline-block;
+}
+
+.people-wrapper__body__con__left__img {
+  display: block;
+  width: 80%;
+}
+
+.people-wrapper__body__con__left__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 5 / 7;
+}
+
+.people-wrapper__body__con__left__img__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px 8px;
+  background-color: rgba(255,255,255,0.8); 
+  border: 1px solid #000; 
+}
+
+.people-wrapper__body__con__right__img {
+  width: 80%;
+}
+
+.people-wrapper__body__con__right__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 5 / 7;
+}
