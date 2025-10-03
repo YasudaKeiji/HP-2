@@ -1,93 +1,112 @@
 @charset "UTF-8";
 
-.contact-wrapper__block {
-  display: flex;
-  justify-content: space-between;
+.top {
+  background-image: url("../img/co-fv__bg.png");
 }
 
-.contact-wrapper__block__left {
-  width: 40%;
-  line-height: 1.8;
-  font-size: 1.25rem;
-}
-
-.contact-wrapper__block__right {
-  position: relative;
-  background: url(../img/contact.png) no-repeat center;
-  background-size: cover;
-  width: 50%;
-}
-
-.contact-wrapper__form {
+.con-wrap__con {
   width: 100%;
-  margin: 10% auto;
+  margin: 0 auto;
 }
 
-.contact-wrapper__form__box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto 7.5%;
+.con-wrap__con__form__item {
+  margin: 4.5% 0;
 }
 
-.contact-wrapper__form__box.__area {
-  align-items: baseline;
-}
-
-.contact-wrapper__form__box__select,
-.contact-wrapper__form__box__input,
-.contact-wrapper__form__box__area {
-  height: 4.25rem;
-  width: 70%;
-  padding-left: 5px;
-  font-size: 1rem;
-}
-
-.contact-wrapper__form__box__select {
-  width: 72.5%;
-  height: 4.5rem;
-}
-
-.contact-wrapper__form__box__area {
-  height: 15rem;
-  padding: 12.5px 5px;
-}
-
-.contact-wrapper__form__box__ttl {
-  width: 40%;
-  height: 100%;
-  font-size: 1.15rem;
-  position: relative;
-}
-
-.contact-wrapper__form__box__ttl::after {
-  content: "必須";
-  position: absolute;
-  top: 50%;
-  left: 67.5%;
-  transform: translateY(-50%) translateX(-50%);
-  text-align: center;
-  width: 25%;
-  line-height: 2.5;
-  font-size: 0.85rem;
-  color: #c72930;
-  border: 1px solid #c72930;
-  border-radius: 2px;
-}
-
-.contact-btn {
+.con-wrap__con__form__item label {
   display: block;
-  color: #fff;
-  background: #000;
-  cursor: pointer;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border: solid 2.5px #000;
+  position: relative;
+  color: #000;
+  font-size: 1.2rem;
+  padding-bottom: 0.75%;
 }
 
-.contact-btn:hover {
+.con-wrap__con__form__item label p {
+  font-weight: 400;
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+}
+
+.con-wrap__con__form__item label span {
+  background-color: #fff;
+  padding: 0.25% 2%;
+  color: #d10d0c;
+  font-weight: 400;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+  margin-left: 2%;
+  border: 1px solid #d10d0c;
+}
+
+.con-wrap__con__form__item input {
+  width: 100%;
+  height: 4rem;
+  border: solid 2.5px #000;
+  font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+  padding-left: 2%;
+  box-sizing: border-box;
+}
+
+.con-wrap__con__form__item textarea {
+  width: 100%;
+  height: 15rem;
+  border: solid 2.5px #000;
+  font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+  padding-left: 2%;
+  padding-top: 4%;
+  box-sizing: border-box;
+}
+
+.con-wrap__con__form__btn {
+  width: 30%;
+  margin: 0 auto;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+.con-wrap__con__form__btn button {
+  width: 100%;
+  cursor: pointer;
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);;
+  font-weight: bold;
+  color: #fff;
+  border: unset;
+  background-color: unset;
+  line-height: 2.4;
+  letter-spacing: 0.3em;
+  padding-left: 7%;
+  border: 2.0px solid transparent;
+}
+
+.con-wrap__con__form__btn:hover {
+  background-color: #fff;
+}
+
+.con-wrap__con__form__btn:hover button {
   color: #000;
-  background: #fff;
-  transition: 0.75s;
+  border: solid 2.0px #000;
+  outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .con-wrap__con__form__item input {
+    height: 3rem;
+  }
+
+  .con-wrap__con__form__item textarea {
+    height: 12rem;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .con-wrap__con__form__item input {
+    height: 2rem;
+  }
+
+  .con-wrap__con__form__item textarea {
+    height: 8rem;
+  }
+
+  .con-wrap__con__form__btn {
+    width: 35%;
+  }
 }

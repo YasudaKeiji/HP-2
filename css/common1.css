@@ -9,12 +9,12 @@ body {
   line-height: 1.8;
   letter-spacing: 1px;
   word-break: break-all;
-  color: #333;
+  color: #000;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
 li {
@@ -57,7 +57,7 @@ header {
   font-size: 1rem;
   font-weight: bold;
   padding: 0 2.5%;
-  border-right: solid 3px #333;
+  border-right: solid 3px #000;
 }
 
 .header-wrapper__nav__list__item a:hover {
@@ -90,8 +90,8 @@ header .drawer {
 .ttl {
   display: inline-block;
   margin-bottom: 10%;
-  font-size: 3rem;
-  border-bottom: solid 3px #333;
+  font-size: clamp(0.938rem, 0.369rem + 2.84vw, 2.5rem);
+  border-bottom: solid 3px #000;
   line-height: 1.3;
 }
 
@@ -108,7 +108,7 @@ header .drawer {
 
 .btn a:hover {
   color: #fff;
-  background: #333;
+  background: #000;
   transition: 0.3s;
 }
 
@@ -118,9 +118,9 @@ header .drawer {
   height: 100%;
   background: #fff;
   text-align: center;
-  font-size: 1.15rem;
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
   font-weight: 700;
-  border: solid 2.5px #333;
+  border: solid 2.5px #000;
   border-radius: 9999px;
 }
 
@@ -204,4 +204,126 @@ footer {
 .footer-wrapper__copyright {
   display: block;
   text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .ttl {
+      margin-bottom: 2.5%;
+    }
+
+  .intro {
+  width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .drawer {
+    visibility: visible;
+    width: 24px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-top: solid 4px #fff;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  header .drawer::before,
+  header .drawer::after {
+    content: "";
+    display: block;
+    width: 24px;
+    background: #fff;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+  }
+
+  header .drawer::before {
+    top: 6px;
+  }
+
+  header .drawer::after {
+    top: 15px;
+  }
+
+  body.nav-open header .drawer {
+    border-top: 0;
+  }
+
+  body.nav-open header .drawer::before {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+
+  body.nav-open header .drawer::after {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+
+  header .header-wrapper__nav {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: #000;
+  }
+
+  header .header-wrapper__nav__list {
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  header .header-wrapper__nav__list__item {
+    margin: 5% auto;
+    border-right: none;
+    font-size: 1.5rem;
+    line-height: 3;
+  }
+
+  header .header-wrapper__nav__list__item.__contact {
+    width: 13.5rem;
+    border-radius: 50px;
+  }
+
+  .btn {
+    width: 10rem;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    width: 90%;
+  }
+
+  .header-wrapper__logo {
+    width: 62.5%;
+  }
+
+  .btn {
+    line-height: 2.5;
+    width: 8rem;
+  }
+
+  .footer-wrapper__logo {
+    width: 82.5%;
+  }
+
+  .footer-wrapper__list__item {
+    font-size: 4vw;
+  }
+
+  .footer-wrapper__copyright {
+    font-size: 3.35vw;
+  }
 }

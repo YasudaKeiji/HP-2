@@ -75,6 +75,9 @@
   padding-left: 0;
 }
 
+.people-wrapper__intro .txt {
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
 .people-wrapper__body {
   width: 100%;
 }
@@ -82,41 +85,199 @@
 .people-wrapper__body__con {
   display: flex;
   justify-content: space-between;
+  margin-top: 5%;
 }
 
-.people-wrapper__body__con__left {
+.people-wrapper__body__con__left__img1 {
   position: relative;
-  display: inline-block;
-}
-
-.people-wrapper__body__con__left__img {
   display: block;
-  width: 80%;
+  width: 45%;
 }
 
-.people-wrapper__body__con__left__img img {
+.people-wrapper__body__con__left__img1:hover {
+  transition: all 0.3s ease-in-out 0s;
+  transform: scale(1.05);
+}
+
+.people-wrapper__body__con__left__img1 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   aspect-ratio: 5 / 7;
 }
 
-.people-wrapper__body__con__left__img__label {
+.people-wrapper__body__con__left__img1__label {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 4px 8px;
-  background-color: rgba(255,255,255,0.8); 
+  background-color: rgba(0,0,0,1.0); 
   border: 1px solid #000; 
 }
 
-.people-wrapper__body__con__right__img {
-  width: 80%;
+.people-wrapper__body__con__left__img1__label p {
+  color: #fff;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
 
-.people-wrapper__body__con__right__img img {
+.people-wrapper__body__con__left__img1__label span {
+  font-weight: bold;
+}
+
+.people-wrapper__body__con__left__img1__label .name {
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+}
+
+.people-wrapper__body__con__right__img1 {
+  position: relative;
+  display: block;
+  width: 45%;
+  bottom: 7.5rem;
+}
+
+.people-wrapper__body__con__right__img1:hover {
+  transition: all 0.3s ease-in-out 0s;
+  transform: scale(1.05);
+}
+
+.people-wrapper__body__con__right__img1 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   aspect-ratio: 5 / 7;
+}
+
+.people-wrapper__body__con__right__img1__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2% 3%;
+  background-color: rgba(0, 0, 0, 1.0);
+  border: 1px solid #000;
+}
+
+.people-wrapper__body__con__right__img1__label p {
+  color: #fff;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
+
+.people-wrapper__body__con__right__img1__label span {
+  font-weight: bold;
+}
+
+.people-wrapper__body__con__right__img1__label .name {
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+}
+
+.people-wrapper__body__con__left__img2 {
+  position: relative;
+  display: block;
+  width: 45%;
+}
+
+.people-wrapper__body__con__left__img2:hover {
+  transition: all 0.3s ease-in-out 0s;
+  transform: scale(1.05);
+}
+
+.people-wrapper__body__con__left__img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 5 / 7;
+}
+
+.people-wrapper__body__con__left__img2__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 1.0);
+  border: 1px solid #000;
+}
+
+.people-wrapper__body__con__left__img2__label p {
+  color: #fff;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
+
+.people-wrapper__body__con__left__img2__label span {
+  font-weight: bold;
+}
+
+.people-wrapper__body__con__left__img2__label .name {
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+}
+
+.people-wrapper__body__con__right__img2 {
+  position: relative;
+  display: block;
+  width: 45%;
+  bottom: 7.5rem;
+}
+
+.people-wrapper__body__con__right__img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 5 / 7;
+}
+
+.people-wrapper__body__con__right__img2:hover {
+  transition: all 0.3s ease-in-out 0s;
+  transform: scale(1.05);
+}
+
+.people-wrapper__body__con__right__img2__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 1.0);
+  border: 1px solid #000;
+}
+
+.people-wrapper__body__con__right__img2__label p {
+  color: #fff;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
+}
+
+.people-wrapper__body__con__right__img2__label span {
+  font-weight: bold;
+}
+
+.people-wrapper__body__con__right__img2__label .name {
+  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .recruit-wrapper {
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  .recruit-wrapper__intro {
+    position: unset;
+  }
+
+  .recruit-wrapper__intro .ttl {
+    position: unset;
+  }
+
+  .recruit-wrapper__body {
+    width: 100%;
+  }
+
+  .people-wrapper__body__con {
+    flex-direction: column;
+  }
+
+  .people-wrapper__body__con__left__img1 {
+    width: 100%;
+  }
+
+  .people-wrapper__body__con__right__img1 {
+    width: 100%;
+    bottom: 0;
+  }
 }
