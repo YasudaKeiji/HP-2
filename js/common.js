@@ -13,3 +13,12 @@ $("#h-nav a").click(function () {
   $("#h-nav").removeClass('panelactive');
   //ナビゲーションのpanelactiveクラスも除去する
 });
+
+// 画像要素を取得
+const img = document.querySelector('.service-wrapper__body__right__con__img img');
+
+// 画像の縦幅(px)
+const height = img.clientHeight;
+
+// CSSのカスタム変数にセット
+document.documentElement.style.setProperty('--img-height', `${height}px`);

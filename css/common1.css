@@ -30,7 +30,7 @@ li {
   align-items: center;
   background-color: #fff;
   box-shadow: 0px 10px 10px rgb(0 0 0 / 20%);
-  z-index: 1;
+  z-index: 10;
 }
 
 .header-wrap__logo {
@@ -120,7 +120,6 @@ main {
 .btn {
   width: 12rem;
   line-height: 2.5;
-  padding-left: 13%;
   padding-top: 5%;
 }
 
@@ -267,7 +266,7 @@ footer {
   }
 
   .h-open.active span:nth-of-type(1) {
-    top: 48px;
+    top: 38px;
     left: 24px;
     transform: translateY(6px) rotate(-45deg);
     width: 50%;
@@ -278,7 +277,7 @@ footer {
   }
 
   .h-open.active span:nth-of-type(3) {
-    top: 60px;
+    top: 50px;
     left: 24px;
     transform: translateY(-6px) rotate(45deg);
     width: 50%;
