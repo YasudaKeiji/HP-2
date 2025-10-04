@@ -34,3 +34,14 @@ th, td {
   padding-bottom: 1%;
   font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
+
+@media screen and (max-width: 480px) {
+  .company-wrapper__body table {
+    margin-top: 3%;
+  }
+
+  .access-wrap__body__access iframe {
+    margin-top: 3%;
+    height: 100%;
+  }
+}

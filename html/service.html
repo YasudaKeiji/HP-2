@@ -29,10 +29,12 @@
 
 <body>
   <header class="header" id="header">
-    <div class="header-wrapper">
-      <a href="../index.html" class="header-wrapper__logo">
-        <img src="../img/logo.png" alt="ロゴ画像">
-      </a>
+    <div class="header-wrap">
+      <div class="header-wrap__logo">
+        <a href="../index.html">
+          <img src="../img/logo.png" alt="ロゴ画像">
+        </a>
+      </div>
       <nav class="header-wrapper__nav">
         <ul class="header-wrapper__nav__list">
           <li class="header-wrapper__nav__list__item">
@@ -52,8 +54,33 @@
           </li>
         </ul>
       </nav>
+      <div class="h-open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="h-nav">
+        <div id="h-nav__list">
+          <ul class="header-wrapper__list2">
+            <li class="header-wrapper__list2__item">
+              <a href="service.html">SERVICE</a>
+            </li>
+            <li class="header-wrapper__list2__item">
+              <a href="company.html">COMPANY</a>
+            </li>
+            <li class="header-wrapper__list2__item">
+              <a href="recruit.html">RECRUIT</a>
+            </li>
+            <li class="header-wrapper__list2__item">
+              <a href="news.html">NEWS</a>
+            </li>
+            <li class="header-wrapper__list2__item">
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="drawer"></div>
   </header>
 
   <main>
@@ -172,8 +199,8 @@
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
 </body>
 
 </html>

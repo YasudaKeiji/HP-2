@@ -21,22 +21,32 @@ li {
   list-style: none;
 }
 
-header {
-  background-color: #fff;
-}
-
-.header-wrapper {
+.header-wrap {
+  position: fixed;
+  width: 100%;
+  height: 92.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5%;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgb(0 0 0 / 20%);
+  z-index: 1;
 }
 
-.header-wrapper__logo {
-  width: 15rem;
+.header-wrap__logo {
+  width: 20%;
+  padding: 1% 2%;
 }
 
-.header-wrapper__logo img {
+.header-wrap__logo a {
+  transition: all 0.3s;
+}
+
+.header-wrap__logo a:hover {
+  opacity: 0.7;
+}
+
+.header-wrap__logo a img {
   display: block;
   width: 100%;
   height: 100%;
@@ -69,8 +79,16 @@ header {
   border-right: none;
 }
 
-header .drawer {
-  visibility: hidden;
+.h-open {
+  display: none;
+}
+
+#h-nav {
+  display: none;
+}
+
+main {
+  padding-top: 92.5px;
 }
 
 .section {
@@ -155,7 +173,7 @@ footer {
   padding-right: 2.5%;
   margin-right: 2.5%;
   border-right: solid 3px #fff;
-  font-size: 1.2rem;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
   line-height: 1;
 }
 
@@ -198,116 +216,209 @@ footer {
 .footer-wrapper__sns__icon1 a,
 .footer-wrapper__sns__icon2 a {
   color: #fff;
-  font-size: 2.25rem;
+  font-size: clamp(1.25rem, 0.795rem + 2.27vw, 2.5rem);
 }
 
 .footer-wrapper__copyright {
   display: block;
   text-align: center;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
 
 @media screen and (max-width: 1024px) {
-  .ttl {
-      margin-bottom: 2.5%;
-    }
-
-  .intro {
-  width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header .drawer {
-    visibility: visible;
-    width: 24px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    border-top: solid 4px #fff;
-    cursor: pointer;
-    z-index: 100;
-  }
-
-  header .drawer::before,
-  header .drawer::after {
-    content: "";
-    display: block;
-    width: 24px;
-    background: #fff;
-    height: 4px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all 0.5s;
-  }
-
-  header .drawer::before {
-    top: 6px;
-  }
-
-  header .drawer::after {
-    top: 15px;
-  }
-
-  body.nav-open header .drawer {
-    border-top: 0;
-  }
-
-  body.nav-open header .drawer::before {
-    top: 9px;
-    transform: rotate(-45deg);
-  }
-
-  body.nav-open header .drawer::after {
-    top: 9px;
-    transform: rotate(45deg);
-  }
-
-  header .header-wrapper__nav {
-    position: fixed;
+  .header-wrapper__nav {
     display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    background: #000;
   }
 
-  header .header-wrapper__nav__list {
-    display: block;
-    width: 50%;
+  .h-open {
+    display: inline-block;
     position: absolute;
+    z-index: 9999;
+    right: 0;
+    cursor: pointer;
+    width: 92.5px;
+    height: 100%;
+    background-color: #000;
+    text-align: center;
+  }
+
+  /* ×に変化させる */
+  .h-open span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 24px;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 50%;
+  }
+
+  .h-open span:nth-of-type(1) {
+    top: 30.25px;
+  }
+
+  .h-open span:nth-of-type(2) {
+    top: 45.25px;
+  }
+
+  .h-open span:nth-of-type(3) {
+    top: 60.25px;
+  }
+
+  .h-open.active span:nth-of-type(1) {
+    top: 48px;
+    left: 24px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;
+  }
+
+  .h-open.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .h-open.active span:nth-of-type(3) {
+    top: 60px;
+    left: 24px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 50%;
+  }
+
+  #h-nav {
+    display: inline-block;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -120%;
+    width: 50%;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 20%);
+    transition: all 0.6s;
+  }
+
+  #h-nav ul {
+    position: absolute;
+    z-index: 999;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
   }
 
-  header .header-wrapper__nav__list__item {
-    margin: 5% auto;
-    border-right: none;
-    font-size: 1.5rem;
-    line-height: 3;
+  #h-nav li {
+    position: relative;
+    border-bottom: solid 1.5px #000;
+    margin: 22.5% 0;
   }
 
-  header .header-wrapper__nav__list__item.__contact {
-    width: 13.5rem;
-    border-radius: 50px;
+  #h-nav li::after {
+    position: absolute;
+    content: "";
+    left: -15px;
+    bottom: 0;
+    height: 100%;
+    width: 3.75px;
+    background-color: #000;
+  }
+
+  #h-nav li a {
+    color: #000;
+    display: block;
+    font-size: clamp(0.9rem, 0.773rem + 0.64vw, 1.25rem);
+    font-weight: 400;
+  }
+
+  #h-nav.panelactive {
+    right: 0;
+  }
+  
+  .ttl {
+    margin-bottom: 2.5%;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .footer-wrapper__logo {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 65px;
+  }
+
+  .header-wrap {
+    height: 65px;
+  }
+
+  .header-wrap__logo {
+    width: 30%;
+    padding: 1% 2%;
+  }
+
+  .h-open {
+    width: 65px;
+  }
+
+  .h-open span {
+    left: 16px;
+    height: 1px;
+  }
+
+  .h-open span:nth-of-type(1) {
+    top: 22.5px;
+  }
+
+  .h-open span:nth-of-type(2) {
+    top: 32.5px;
+  }
+
+  .h-open span:nth-of-type(3) {
+    top: 42.5px;
+  }
+
+  .h-open.active span:nth-of-type(1) {
+    top: 27px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;
+  }
+
+  .h-open.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .h-open.active span:nth-of-type(3) {
+    top: 39px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 50%;
+  }
+  
+  .footer-wrapper__logo {
+    width: 15rem;
   }
 
   .btn {
     width: 10rem;
   }
-
 }
 
 @media screen and (max-width: 480px) {
-  .inner {
-    width: 90%;
+  .header-wrap__logo {
+    width: 45%;
+    padding: 1% 2%;
   }
 
-  .header-wrapper__logo {
-    width: 62.5%;
+  #h-nav {
+    width: 55%;
+  }
+
+  .inner {
+    width: 90%;
   }
 
   .btn {
@@ -316,14 +427,7 @@ footer {
   }
 
   .footer-wrapper__logo {
-    width: 82.5%;
+    width: 10rem;
   }
 
-  .footer-wrapper__list__item {
-    font-size: 4vw;
-  }
-
-  .footer-wrapper__copyright {
-    font-size: 3.35vw;
-  }
 }
