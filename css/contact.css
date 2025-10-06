@@ -5,7 +5,7 @@
 }
 
 .con-wrap__con {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -70,7 +70,7 @@
   color: #fff;
   border: unset;
   background-color: unset;
-  line-height: 2.4;
+  line-height: 2.8;
   letter-spacing: 0.3em;
   padding-left: 7%;
   border: 2.0px solid transparent;
@@ -107,6 +107,6 @@
   }
 
   .con-wrap__con__form__btn {
-    width: 35%;
+    width: 40%;
   }
 }

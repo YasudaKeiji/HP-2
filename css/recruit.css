@@ -9,14 +9,10 @@
   justify-content: space-between;
 }
 
-.recruit-wrapper__intro {
-  position: sticky;
-  top: 0;
-}
-
 .recruit-wrapper__intro .ttl {
   position: sticky;
-  top: 0;
+  top: 92.5px;
+  z-index: 11;
 }
 
 .recruit-wrapper__intro .btn {
@@ -93,6 +89,7 @@
   position: relative;
   display: block;
   width: 45%;
+  transition: all 0.3s ease-in-out;
 }
 
 .people-wrapper__body__con__left__img1 a {
@@ -140,6 +137,7 @@
   display: block;
   width: 45%;
   bottom: 7.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .people-wrapper__body__con__right__img1 a {
@@ -186,6 +184,7 @@
   position: relative;
   display: block;
   width: 45%;
+  transition: all 0.3s ease-in-out;
 }
 
 .people-wrapper__body__con__left__img2 a {
@@ -233,6 +232,7 @@
   display: block;
   width: 45%;
   bottom: 7.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .people-wrapper__body__con__right__img2 a {

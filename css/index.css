@@ -340,6 +340,12 @@
   padding-left: 0;
   margin: 0 auto;
   margin-bottom: 5%;
+  width: 10rem;
+  padding-top: 3%;
+}
+
+.news-wrapper__body__list__item .btn a {
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
 
 @media screen and (max-width: 1024px) {
@@ -438,9 +444,8 @@
   }
 
   .news-wrapper__body__list__item .btn {
-    padding-left: 0;
-    margin: 0 auto;
-    margin-bottom: 5%;
+    width: 8rem;
+    padding-top: 0;
   }
 }
 
@@ -470,6 +475,11 @@
 
   .company-wrapper__list__item .btn {
     width: 120px;
+  }
+
+  .news-wrapper__body__list__item .btn {
+    width: 7rem;
+    padding-top: 1%;
   }
 
 }
@@ -507,5 +517,10 @@
   .recruit-wrapper__body__con__txt p {
     padding-top: 0;
     text-align: left;
+  }
+
+  .news-wrapper__body__list__item .btn {
+    width: 5rem;
+    padding-top: 2%;
   }
 }

@@ -33,13 +33,13 @@
 }
 
 .breadcrumb-wrapper__list__item {
-  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
 
 .breadcrumb-wrapper__list__item::after {
   content: ">";
   padding: 0 10px;
-  font-size: clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem);
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
 }
 
 .breadcrumb-wrapper__list__item:last-child::after {

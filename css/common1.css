@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-  font-size: 18px;
+  font-size: 100%;
 }
 
 body {
@@ -44,6 +44,7 @@ li {
 
 .header-wrap__logo a:hover {
   opacity: 0.7;
+  transition: all 0.3s;
 }
 
 .header-wrap__logo a img {
@@ -64,15 +65,20 @@ li {
 
 .header-wrapper__nav__list__item {
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(0.563rem, 0.358rem + 1.02vw, 1.125rem);
   font-weight: bold;
   padding: 0 2.5%;
   border-right: solid 3px #000;
 }
 
+.header-wrapper__nav__list__item a {
+  transition: all 0.3s;
+}
+
 .header-wrapper__nav__list__item a:hover {
   color: #75a9ff;
   opacity: 0.8;
+  transition: all 0.3s;
 }
 
 .header-wrapper__nav__list__item:last-child {
@@ -139,6 +145,7 @@ main {
   font-weight: 700;
   border: solid 2.5px #000;
   border-radius: 9999px;
+  transition: 0.3s;
 }
 
 footer {
@@ -148,7 +155,7 @@ footer {
 }
 
 .footer-wrapper__logo {
-  width: 25rem;
+  width: 23rem;
   height: auto;
   margin: 0 auto;
   margin-bottom: 2.5%;
