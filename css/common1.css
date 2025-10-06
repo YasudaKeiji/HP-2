@@ -432,6 +432,10 @@ footer {
     width: 8rem;
   }
 
+  .btn a {
+    border: solid 1px #000;
+  }
+
   .footer-wrapper__logo {
     width: 10rem;
   }

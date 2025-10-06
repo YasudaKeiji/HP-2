@@ -40,6 +40,10 @@ th, td {
     margin-top: 3%;
   }
 
+  .company-wrapper__body table tr {
+    border-bottom: 1px solid #000;
+  }
+
   .access-wrap__body__access iframe {
     margin-top: 3%;
     height: 100%;

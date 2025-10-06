@@ -102,8 +102,13 @@
     height: 2rem;
   }
 
+  .con-wrap__con__form__item input {
+    border: solid 1px #000;
+  }
+
   .con-wrap__con__form__item textarea {
     height: 8rem;
+    border: solid 1px #000;
   }
 
   .con-wrap__con__form__btn {
